@@ -1,12 +1,12 @@
 import { redirect } from 'next/navigation';
 import { getCurrentUser } from '@/lib/current-user';
-import LoginForm from '@/components/general/login-form';
+import SignupForm from '@/components/general/signup-form';
 
-export default async function LoginPage() {
+export default async function SingupPage() {
   const user = await getCurrentUser();
   if (user) {
     redirect('/');
   }
 
-  return <LoginForm />;
+  return <SignupForm />;
 }
