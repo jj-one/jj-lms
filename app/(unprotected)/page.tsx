@@ -1,9 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ThemeModeToggle } from "@/components/ui/theme-toggle";
 import { getCurrentUser } from "@/lib/current-user";
-import Image from "next/image";
 import Link from "next/link";
 
 interface FeatureType {
@@ -63,7 +61,7 @@ export default async function Home() {
             </div>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
             {features.map((feature, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                     <CardHeader>

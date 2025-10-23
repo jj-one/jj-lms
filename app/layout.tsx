@@ -38,7 +38,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AuthProvider>
-            <Navbar />
             {children}
             <Toaster position="top-center"  />
           </AuthProvider>
