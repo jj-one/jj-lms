@@ -7,6 +7,7 @@ import { ThemeModeToggle } from "@/components/ui/theme-toggle";
 import { useAuth } from "@/context/auth-context";
 import { buttonVariants } from "@/components/ui/button";
 import { UserDropdown } from "./user-dropdown";
+import { UnprotectedNavbarSkeleton } from "./navbar-skeleton";
 
 interface UnprotectedNavbarProps {
     name: string;
@@ -21,6 +22,8 @@ const navigation: UnprotectedNavbarProps[] = [
 
 export function UnprotectedNavbar() {
     const { user, loading } = useAuth();
+
+    if (loading) return <UnprotectedNavbarSkeleton />;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-[backdrop-filter]:bg-background/60">
@@ -45,7 +48,7 @@ export function UnprotectedNavbar() {
                 
                 <div className="flex items-center space-x-4">
                     <ThemeModeToggle />
-                    {loading ? null : !user ? (
+                    {!user ? (
                         <>
                             <Link
                                 href="/login"
