@@ -1,3 +1,5 @@
+import "server-only";
+
 // lib/current-user.ts
 import { cookies } from 'next/headers';
 import { verifyJwt } from '@/lib/auth';

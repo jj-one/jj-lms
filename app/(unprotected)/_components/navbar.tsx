@@ -17,7 +17,6 @@ interface UnprotectedNavbarProps {
 const navigation: UnprotectedNavbarProps[] = [
     { name: "Home", href: "/" },
     { name: "Courses", href: "/courses" },
-    { name: "Dashboard", href: "/dashboard" },
 ];
 
 export function UnprotectedNavbar() {
@@ -44,6 +43,14 @@ export function UnprotectedNavbar() {
                             {item.name}
                         </Link>
                     ))}
+                    {user && (
+                        <Link
+                            href="/admin"
+                            className="text-sm font-medium transition-colors hover:text-muted-foreground/80"
+                        >
+                            Dashboard
+                        </Link>
+                    )}
                 </div>
                 
                 <div className="flex items-center space-x-4">

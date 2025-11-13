@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
   }
 
-  const token = await signJwt({ id: user.id, email: user.email, name: user.name });
+  const token = await signJwt({ id: user.id, email: user.email, name: user.name, role: user.role });
 
   const res = NextResponse.json({ success: true });
   res.cookies.set('token', token, {

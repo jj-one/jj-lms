@@ -32,7 +32,7 @@ export default function SignupForm() {
     if (res.ok) {
       toast.success('Signed up successfully! Redirecting now...');
       await refreshUser(); // ✅ Refresh user context after successful login
-      router.push('/dashboard'); // ⛳ Redirect to dashboard
+      router.push('/'); // ⛳ Redirect to dashboard
     } else {
         toast.error('Sign-up failed. Please check your credentials.');
         setError('Sign-Up failed');

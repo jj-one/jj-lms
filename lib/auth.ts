@@ -1,3 +1,5 @@
+import "server-only";
+
 // lib/auth.ts
 import { SignJWT, jwtVerify } from 'jose';
 
@@ -7,6 +9,7 @@ export interface AuthPayload {
   id: string;
   email: string;
   name: string;
+  role: string;
   [key: string]: any;
 }
 

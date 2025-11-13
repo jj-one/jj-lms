@@ -1,3 +1,5 @@
+import "server-only";
+
 // lib/db.ts
 import { PrismaClient } from '@/lib/generated/prisma';
 

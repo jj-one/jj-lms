@@ -2,7 +2,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyJwt } from '@/lib/auth';
 
-const protectedRoutes = ['/dashboard'];
+const protectedRoutes = ['/admin'];
 
 export function middleware(req: NextRequest) {
   const token = req.cookies.get('token')?.value;
@@ -18,5 +18,5 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*'],
+  matcher: ['/admin/:path*'],
 };
