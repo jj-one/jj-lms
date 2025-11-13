@@ -20,6 +20,19 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## JJ's Own Adaptations
+
+- I included my own signature name (JJ) in the platform's name
+- I implemented my own Custom Sign-UP and Login instead of Better-Auth
+- I used local PostgresSQL
+- I omitted ActJet implementation for now
+- I used my own media files, such as logo and other images since I didn't pay for Marshal's
+- I used DigitalOcean's S3 (Space) Buckets because tigrisdata bucket's api v3 isn't fully compatible with the necessary headers
+- I used all-lowercased-hyphenated naming patterns for code file names instead of CamelBack used by Marshal
+- Finally, there were few instances where I used TailWindCSS styling in a way different from Jan's.
+
+Apart from the above few cases, I strictly followed [Create an LMS Course Platform with Next.js, Arcjet, Better-Auth, and Stripe (Part 1/2)](https://www.youtube.com/watch?v=xqoYkX4hfwg) to the end. You are free to fork and/or clone and test, and also adapt as you like.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
